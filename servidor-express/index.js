@@ -1,15 +1,19 @@
-const express = require('express');
+var express = require('express');
+var bodyParser = require('body-parser');
+var app = express();
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json())
 
-const app = express();
-
-app.get('/', (request, response) => {
+app.get('/', (req, res) => {
     console.log('Servidor foi chamado!');
 
-    return response.send("Hello World");
+    return res.send("Tudo ok");
 });
 
-app.get('/products', (request, response) => {
-    return response.send("Sucesso");
+app.post('/products', function(req, res) {
+    console.log(req.body);
+    res.send("Sucesso");
+    
 });
 
 app.listen(7777);

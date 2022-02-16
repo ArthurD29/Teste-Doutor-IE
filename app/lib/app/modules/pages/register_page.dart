@@ -5,6 +5,7 @@ import 'package:app/app/modules/bloc/register/register_event.dart';
 import 'package:app/app/modules/bloc/register/register_state.dart';
 import 'package:asuka/asuka.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -33,7 +34,9 @@ class _RegisterPageState extends State<RegisterPage> {
         listener: (context, state) {
           final formStatus = state.formStatus;
           if (formStatus is SubmissionFailed) {
-            AsukaSnackbar.alert(formStatus.exception.toString()).show();
+            AsukaSnackbar.alert(formStatus.exception).show();
+          } else if (formStatus is SubmissionSuccess) {
+            AsukaSnackbar.success(formStatus.message).show();
           }
         },
         child: Form(
@@ -113,6 +116,7 @@ class _RegisterPageState extends State<RegisterPage> {
               onPressed: () {
                 if (_formKey.currentState!.validate()) {
                   context.read<RegisterBloc>().add(RegisterSubmitted());
+                  FocusManager.instance.primaryFocus?.unfocus();
                 }
               },
               child: Text('Enviar'),
