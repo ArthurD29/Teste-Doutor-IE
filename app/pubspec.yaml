@@ -11,6 +11,7 @@ environment:
 dependencies:
   asuka: ^2.0.0
   flutter_bloc: ^8.0.0
+  dio: ^4.0.4
   flutter:
     sdk: flutter
 

@@ -1,8 +1,8 @@
-import 'package:app/app/shared/auth_repository.dart';
-import 'package:app/app/shared/form_submission_status.dart';
-import 'package:app/app/shared/register/register_bloc.dart';
-import 'package:app/app/shared/register/register_event.dart';
-import 'package:app/app/shared/register/register_state.dart';
+import 'package:app/app/modules/bloc/auth_repository.dart';
+import 'package:app/app/modules/bloc/form_submission_status.dart';
+import 'package:app/app/modules/bloc/register/register_bloc.dart';
+import 'package:app/app/modules/bloc/register/register_event.dart';
+import 'package:app/app/modules/bloc/register/register_state.dart';
 import 'package:asuka/asuka.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

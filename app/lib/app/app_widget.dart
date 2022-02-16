@@ -1,4 +1,4 @@
-import 'package:app/app/pages/start_page.dart';
+import 'package:app/app/modules/pages/start_page.dart';
 import 'package:flutter/material.dart';
 import 'package:asuka/asuka.dart' as asuka;
 
