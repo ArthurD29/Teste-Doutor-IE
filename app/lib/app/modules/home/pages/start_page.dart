@@ -1,5 +1,5 @@
-import 'package:app/app/modules/bloc/auth_repository.dart';
-import 'package:app/app/modules/pages/register_page.dart';
+import 'package:app/app/modules/home/pages/register_page.dart';
+import 'package:app/app/shared/repositories/auth_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

@@ -1,4 +1,4 @@
-import 'package:app/app/modules/bloc/form_submission_status.dart';
+import 'package:app/app/shared/status/form_submission_status.dart';
 
 class RegisterState {
   final String name;
