@@ -2,8 +2,14 @@ import 'package:app/app/shared/form_submission_status.dart';
 
 class RegisterState {
   final String name;
+  bool get isValidName => name.length > 1;
+
   final String description;
+  bool get isValidDescription => description.length > 1;
+
   final String value;
+  bool get isValidValue => value.length > 1;
+
   final FormSubmissionStatus formStatus;
 
   RegisterState({

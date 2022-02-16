@@ -1,26 +1,26 @@
 abstract class RegisterEvent {}
 
 class RegisterNameChanged extends RegisterEvent {
-  final String name;
+  final String? name;
 
   RegisterNameChanged({
-    required this.name,
+    this.name,
   });
 }
 
 class RegisterDescriptionChanged extends RegisterEvent {
-  final String description;
+  final String? description;
 
   RegisterDescriptionChanged({
-    required this.description,
+    this.description,
   });
 }
 
 class RegisterValueChanged extends RegisterEvent {
-  final String value;
+  final String? value;
 
   RegisterValueChanged({
-    required this.value,
+    this.value,
   });
 }
 
