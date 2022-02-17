@@ -11,6 +11,12 @@ class AppWidget extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: AppColors.primary,
+        appBarTheme: AppBarTheme(
+          backgroundColor: AppColors.black,
+          iconTheme: IconThemeData(
+              color: AppColors
+                  .primary), // set backbutton color here which will reflect in all screens.
+        ),
       ),
       home: StartPage(),
       builder: asuka.builder,

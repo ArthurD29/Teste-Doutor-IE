@@ -8,4 +8,9 @@ class AppFonts {
     fontSize: 18,
     fontWeight: FontWeight.w600,
   );
+
+  static TextStyle subtitle = GoogleFonts.workSans(
+    fontWeight: FontWeight.w300,
+    color: AppColors.grey,
+  );
 }
